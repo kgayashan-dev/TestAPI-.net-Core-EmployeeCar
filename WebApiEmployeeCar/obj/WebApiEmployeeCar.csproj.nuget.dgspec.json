@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gayashangma/RiderProjects/DB connection Console/WebApiEmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj": {}
+    "/Users/gayashangma/Documents/BackEndAPI_Employee_Car/TestAPI-.net-Core-EmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj": {}
   },
   "projects": {
-    "/Users/gayashangma/RiderProjects/DB connection Console/WebApiEmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj": {
+    "/Users/gayashangma/Documents/BackEndAPI_Employee_Car/TestAPI-.net-Core-EmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gayashangma/RiderProjects/DB connection Console/WebApiEmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj",
+        "projectUniqueName": "/Users/gayashangma/Documents/BackEndAPI_Employee_Car/TestAPI-.net-Core-EmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj",
         "projectName": "WebApiEmployeeCar",
-        "projectPath": "/Users/gayashangma/RiderProjects/DB connection Console/WebApiEmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj",
+        "projectPath": "/Users/gayashangma/Documents/BackEndAPI_Employee_Car/TestAPI-.net-Core-EmployeeCar/WebApiEmployeeCar/WebApiEmployeeCar.csproj",
         "packagesPath": "/Users/gayashangma/.nuget/packages/",
-        "outputPath": "/Users/gayashangma/RiderProjects/DB connection Console/WebApiEmployeeCar/WebApiEmployeeCar/obj/",
+        "outputPath": "/Users/gayashangma/Documents/BackEndAPI_Employee_Car/TestAPI-.net-Core-EmployeeCar/WebApiEmployeeCar/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gayashangma/.nuget/NuGet/NuGet.Config"
