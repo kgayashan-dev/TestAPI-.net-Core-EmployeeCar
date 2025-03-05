@@ -1,3 +1,4 @@
+using System.Data;
 using WebApiEmployeeCar.Models;
 using Microsoft.Data.SqlClient;
 
@@ -133,9 +134,19 @@ namespace WebApiEmployeeCar.Repositories
 
         public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
         {
-            User user = null;
+            User user = new User();
             string hashedPassword = Encryption.Encrypt(password); // Hash the password for comparison
+            DBAccess dba = new DBAccess();
+            DataTable dt=dba.getData("sp_GetUserByUsernameAndPassword @Username='"+username+"', @PasswordHash='"+hashedPassword+"'");
+            if (dt.Rows.Count > 0)
+            {
+                user.Id = Convert.ToInt32(dt.Rows[0]["Id"]);
+                user.Username = Convert.ToString(dt.Rows[0]["Username"]);
+                user.Email = Convert.ToString(dt.Rows[0]["Email"]);
+                user.Role = Convert.ToString(dt.Rows[0]["Role"]);
+            }
 
+            return user;
             using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
