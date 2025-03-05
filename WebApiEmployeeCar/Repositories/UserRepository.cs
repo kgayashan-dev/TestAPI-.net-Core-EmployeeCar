@@ -13,7 +13,7 @@ namespace WebApiEmployeeCar.Repositories
         public UserRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
-            string kk;
+  
         }
 
         // Get all users using stored procedure
