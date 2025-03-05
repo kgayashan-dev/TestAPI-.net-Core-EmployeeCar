@@ -1,7 +1,6 @@
 using WebApiEmployeeCar.Models;
 using Microsoft.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Text;
+
 
 namespace WebApiEmployeeCar.Repositories
 {
@@ -131,39 +130,6 @@ namespace WebApiEmployeeCar.Repositories
                 await command.ExecuteNonQueryAsync();
             }
         }
-
-        // Get user by username and password for login (NO HASHING)
-        // public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
-        // {
-        //     User user = null;
-        //
-        //     using (var connection = new SqlConnection(_connectionString))
-        //     {
-        //         await connection.OpenAsync();
-        //         var command = new SqlCommand("sp_GetUserByUsernameAndPassword", connection)
-        //             { CommandType = System.Data.CommandType.StoredProcedure };
-        //         command.Parameters.AddWithValue("@Username", username);
-        //         command.Parameters.AddWithValue("@PasswordHash", password); // Checking plain text password
-        //
-        //         var reader = await command.ExecuteReaderAsync();
-        //
-        //         if (await reader.ReadAsync())
-        //         {
-        //             user = new User
-        //             {
-        //                 Id = reader.GetInt32(0),
-        //                 Username = reader.GetString(1),
-        //                 Email = reader.GetString(2),
-        //                 Role = reader.GetString(3),
-        //                 Password = reader.GetString(4) // Storing plain text password
-        //             };
-        //         }
-        //     }
-        //
-        //     return user;
-        // }
-        //
-        //
 
         public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
         {
