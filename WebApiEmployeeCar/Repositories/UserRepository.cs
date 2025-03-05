@@ -147,33 +147,7 @@ namespace WebApiEmployeeCar.Repositories
             }
 
             return user;
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                await connection.OpenAsync();
-                var command = new SqlCommand("sp_GetUserByUsernameAndPassword", connection)
-                    { CommandType = System.Data.CommandType.StoredProcedure };
-
-                // Ensure correct parameter names
-                command.Parameters.AddWithValue("@Username", username);
-                command.Parameters.AddWithValue("@PasswordHash", hashedPassword); // Make sure it's PasswordHash here
-
-                var reader = await command.ExecuteReaderAsync();
-
-                if (await reader.ReadAsync())
-                {
-                    // Don't pass password, just pass other details
-                    user = new User
-                    {
-                        Id = reader.GetInt32(0),
-                        Username = reader.GetString(1),
-                        Email = reader.GetString(2),
-                        Role = reader.GetString(3),
-                        // Exclude Password from being passed
-                    };
-                }
-            }
-
-            return user;
+        
         }
     }
 }
