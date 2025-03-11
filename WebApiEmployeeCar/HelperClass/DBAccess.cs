@@ -8,7 +8,7 @@ public class DBAccess
  // private readonly string connetionString =
  //        @"Data Source=172.16.1.110;Initial Catalog=Destinity_Lease;User ID=sa;Password=2Forty2@44";
   private readonly string connetionString =
-     @"Data Source=172.16.1.7;Initial Catalog=EmployeeCar;User ID=sa;Password=P@$$w0rd;TrustServerCertificate=True";
+     @"Data Source=172.16.1.10;Initial Catalog=EmployeeCar;User ID=sa;Password=P@$$w0rd;TrustServerCertificate=True";
   
   // private readonly string connetionString =
   //     @"Data Source=172.16.1.10;Initial Catalog=Destinity_Lease;User ID=sa;Password=abcd@123;";
